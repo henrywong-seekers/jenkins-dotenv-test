@@ -1,10 +1,4 @@
-@Library('test')
-
-import com.seekerscapital.Test
-
-def c = new Test()
-
-def dotenv = c.test('./test.env')
+def props = readProperties file: test.env
 
 podTemplate(yaml: """
 apiVersion: v1
